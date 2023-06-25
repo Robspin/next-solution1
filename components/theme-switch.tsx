@@ -1,6 +1,6 @@
 "use client"
 
-import { useState } from "react"
+import {useEffect, useState} from "react"
 
 const Moon = ({ ...props }) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
@@ -19,6 +19,11 @@ const Sun = ({ ...props }) => (
 export default function ThemeSwitch() {
     const [showSun, setShowSun] = useState(false)
 
+    useEffect(() => {
+        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            toggleTheme()
+        }
+    }, [])
     const toggleTheme = () => {
         const html = document.querySelector('html')
         if (!html) return

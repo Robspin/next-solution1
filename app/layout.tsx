@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} dark:bg-gray-950`}>
+      <body className={`${montserrat.className} dark:bg-gray-950 transition-colors`}>
         <Navbar />
         {children}
         <Toaster />

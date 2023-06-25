@@ -20,9 +20,9 @@ export default function Description() {
                 </div>
                 <div className="w-full h-full max-md:mt-8">
                     <div className="w-full h-full flex flex-col justify-center">
-                        <div className="mb-4 text-tint-secondary flex font-medium"><Lightning className="w-6 h-6 mr-2" /> FRESH</div>
+                        <div className="mb-4 text-tint-secondary dark:text-tint flex font-medium"><Lightning className="w-6 h-6 mr-2" /> FRESH</div>
                         <h3 className="text-3xl font-extrabold tracking-tight mb-4">We use the latest technologies</h3>
-                        <p>We are not afraid to put new technologies to the test. Constantly researching new ways to provide faster, robust and powerful solutions.</p>
+                        <p>We are not afraid to put new technologies to the test. Our passion is researching new ways to provide faster, robust and powerful solutions.</p>
                     </div>
                 </div>
             </div>
@@ -30,9 +30,9 @@ export default function Description() {
             <div className="max-md:flex max-md:flex-col-reverse md:grid md:grid-cols-2 w-full gap-8 md:p-8">
                 <div className="w-full h-full max-md:mt-8">
                     <div className="w-full h-full flex flex-col justify-center">
-                        <div className="mb-4 text-tint-secondary flex font-medium"><Sliders className="w-6 h-6 mr-2"/> CUSTOMIZED AND COLLABORATIVE</div>
+                        <div className="mb-4 text-tint-secondary dark:text-tint flex font-medium"><Sliders className="w-6 h-6 mr-2"/> CUSTOMIZED AND COLLABORATIVE</div>
                         <h3 className="text-3xl font-extrabold tracking-tight mb-4">One size doesn't fit all</h3>
-                        <p>Our team of experts at Solution One is adept at understanding your needs and tailoring innovative, sustainable solutions specifically for your use-case.
+                        <p>Our team of experts at Solution One is adept at understanding your needs and tailoring solutions specifically for your use-case.
                         </p>
                     </div>
                 </div>
