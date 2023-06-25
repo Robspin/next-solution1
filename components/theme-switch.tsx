@@ -19,8 +19,20 @@ const Sun = ({ ...props }) => (
 export default function ThemeSwitch() {
     const [showSun, setShowSun] = useState(false)
 
+    const toggleTheme = () => {
+        const html = document.querySelector('html')
+        if (!html) return
+        if (showSun) {
+            html.classList.remove('dark')
+            setShowSun(false)
+        } else {
+            html.classList.add('dark')
+            setShowSun(true)
+        }
+    }
+
     return (
-        <button onClick={() => setShowSun(!showSun)}>
+        <button onClick={toggleTheme}>
             {showSun ? <Sun className="w-6 h-6 hover:animate-spin-slow" /> : <Moon className="w-6 h-6 hover:animate-wiggle" />}
         </button>
     )

@@ -32,7 +32,7 @@ export default function Description() {
                     <div className="w-full h-full flex flex-col justify-center">
                         <div className="mb-4 text-tint-secondary flex font-medium"><Sliders className="w-6 h-6 mr-2"/> CUSTOMIZED AND COLLABORATIVE</div>
                         <h3 className="text-3xl font-extrabold tracking-tight mb-4">One size doesn't fit all</h3>
-                        <p>Our team of experts at Solution One is adept at understanding your needs and tailoring innovative, sustainable solutions for your case.
+                        <p>Our team of experts at Solution One is adept at understanding your needs and tailoring innovative, sustainable solutions specifically for your use-case.
                         </p>
                     </div>
                 </div>
@@ -40,34 +40,6 @@ export default function Description() {
                     <Image src="/assets/description-2.jpg" alt="description" className="object-cover" fill={true} />
                 </div>
             </div>
-            {/*<div className="grid max-md:grid-rows-2 md:grid-cols-2 w-full h-full">*/}
-            {/*    <div className="w-full h-full p-8">*/}
-            {/*        <div className="rounded h-full w-full relative overflow-hidden">*/}
-            {/*            <Image src="/assets/description-1.jpg" alt="description" fill={true} />*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="w-full h-full p-8">*/}
-            {/*        <div className="w-full h-full flex flex-col justify-center">*/}
-            {/*            <h3 className="text-2xl font-bold mb-4">Revolutionizing the Architectural Industry through Smart Solutions</h3>*/}
-            {/*            <p>Our team of experts at Solution One is adept at understanding your needs and tailoring innovative, sustainable solutions.</p>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-            {/*<div className="grid max-md:grid-rows-2 md:grid-cols-2 w-full h-full">*/}
-            {/*    <div className="w-full h-full p-8">*/}
-            {/*        <div className="w-full h-full">*/}
-            {/*            <div className="w-full h-full flex flex-col justify-center">*/}
-            {/*                <h3 className="text-2xl font-bold mb-4">Revolutionizing the Architectural Industry through Smart Solutions</h3>*/}
-            {/*                <p>Our team of experts at Solution One is adept at understanding your needs and tailoring innovative, sustainable solutions.</p>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="w-full h-full p-8">*/}
-            {/*        <div className="rounded h-full w-full relative overflow-hidden">*/}
-            {/*            <Image src="/assets/description-2.jpg" alt="description" fill={true} />*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
         </section>
     )
 }

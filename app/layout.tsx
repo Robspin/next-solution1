@@ -1,6 +1,7 @@
 import './globals.css'
-import { montserrat } from "@/lib/fonts";
-import Navbar from "@/components/navbar";
+import { montserrat } from "@/lib/fonts"
+import Navbar from "@/components/navbar"
+import { Toaster } from "@/components/ui/toaster"
 
 export const metadata = {
   title: 'Solution One',
@@ -14,9 +15,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className}`}>
+      <body className={`${montserrat.className} dark:bg-gray-950`}>
         <Navbar />
         {children}
+        <Toaster />
       </body>
     </html>
   )
