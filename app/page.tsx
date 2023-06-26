@@ -8,7 +8,7 @@ import Footer from "@/components/footer";
 
 const PageContainer = ({ children }: { children: ReactNode }) => (
     <main className="w-screen flex flex-col items-center relative">
-        <div className="h-[70vh] w-[70vh] absolute pointer-none right-0">
+        <div className="h-[70vh] w-[80vh] absolute pointer-none right-0">
             <Image src="/assets/hero-gradient.svg" alt="gradient background" className="object-cover" fill={true} />
         </div>
         <div className="xl:min-w-[1280px] max-w-[1280px] px-4">
