@@ -21,14 +21,14 @@ export default function Landing() {
                         initial={{ opacity: 0, x: "-15vw" }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.90, delay: 0.5 }}
-                        className={`text-4xl font-bold tracking-tight sm:text-6xl ${inter.className}`}>We solve problems.</motion.h1>
+                        className={`text-3xl font-bold tracking-tight md:text-6xl ${inter.className}`}>We solve problems.</motion.h1>
                     <motion.h1
                         initial={{ opacity: 0, x: "15vw" }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.90, delay: 0.5 }}
-                        className={`text-4xl font-bold tracking-tight sm:text-6xl ${inter.className}`}>So you don't have to.</motion.h1>
+                        className={`text-3xl font-bold tracking-tight md:text-6xl ${inter.className}`}>So you don't have to.</motion.h1>
 
-                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.40 }} className="mt-6 text-lg leading-8">Specialists in IT solutions from dev-ops to frontend</motion.p>
+                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.40 }} className="mt-2 md:mt-6 md:text-lg leading-8">Specialists in IT solutions from dev-ops to frontend</motion.p>
                 </div>
             </div>
             <AnimatePresence>
