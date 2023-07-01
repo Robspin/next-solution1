@@ -1,7 +1,8 @@
 import './globals.css'
 import { montserrat } from "@/lib/fonts"
-import Navbar from "@/components/navbar"
+import Navbar from "@/components/layout/navbar"
 import { Toaster } from "@/components/ui/toaster"
+import Footer from "@/components/layout/footer"
 
 export const metadata = {
   title: 'Solution One',
@@ -19,6 +20,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Toaster />
+        <Footer />
       </body>
     </html>
   )

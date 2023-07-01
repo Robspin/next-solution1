@@ -20,7 +20,7 @@ export default function Description() {
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ type: "spring", bounce: 0.2, duration: 1.4, delay: 0.2 }}
-                viewport={{ once: true, amount: 0.4 }}
+                viewport={{ once: true, amount: 0.6 }}
                 className="max-md:flex max-md:flex-col md:grid md:grid-cols-2 w-full gap-20 md:p-8">
                 <div className="rounded h-[60vh] w-full relative overflow-hidden">
                     <Image src="/assets/description-1.jpg" alt="description" className="object-cover" fill={true} />

@@ -3,7 +3,6 @@
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
-
 import { Button } from "@/components/ui/button"
 import {
     Form,
@@ -15,7 +14,8 @@ import {
 } from "@/components/ui/form"
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
-import {Input} from "@/components/ui/input";
+import { Input } from "@/components/ui/input"
+import { motion } from "framer-motion"
 
 const CheckIcon = ({ ...props }) => (
     <svg { ...props } xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -55,7 +55,11 @@ export default function Contact() {
     }
 
     return (
-        <section className="w-full h-screen flex flex-col justify-center items-center relative">
+        <motion.section className="w-full h-screen flex flex-col justify-center items-center relative"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ type: "spring", bounce: 0.2, duration: 1.4, delay: 0.2 }}
+                    viewport={{ once: true, amount: 0.6 }}>
             <h3 className="text-2xl font-medium mb-8">Contact us</h3>
             <div className="max-md:w-full p-4 rounded border dark:border-gray-600">
                 <Form {...form}>
@@ -97,6 +101,6 @@ export default function Contact() {
             {/*<div className="absolute h-40 w-40 z-0 right-0">*/}
             {/*    <video src="/assets/globe-1280x720-25fps.mp4" className="absolute w-full invert" autoPlay loop muted />*/}
             {/*</div>*/}
-        </section>
+        </motion.section>
     )
 }

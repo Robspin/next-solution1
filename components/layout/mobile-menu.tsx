@@ -1,6 +1,6 @@
 "use client"
-import {Fragment, ReactNode, useState} from "react"
-import {AnimatePresence, motion} from "framer-motion"
+import { Fragment, ReactNode, useState } from "react"
+import { AnimatePresence, motion } from "framer-motion"
 
 const Burger = ({ ...props }) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
