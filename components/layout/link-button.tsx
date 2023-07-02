@@ -27,10 +27,12 @@ const variants = {
 export default function LinkButton({ route }: Props) {
     return (
         <motion.li initial="rest" whileHover="hover" animate="rest">
-            <Link href={`/${route.toLowerCase()}`}>{route}</Link>
-            <motion.div className="border-b-2 border-tint"
-                variants={variants}
-            />
+            <Link href={`/${route.toLowerCase()}`}>
+                {route}
+                <motion.div className="border-b-2 border-tint"
+                    variants={variants}
+                />
+            </Link>
         </motion.li>
     )
 }

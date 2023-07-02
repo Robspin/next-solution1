@@ -41,7 +41,7 @@ export default function MobileMenu() {
                 {!menuOpened &&
                     <Transition key="burger" className="flex md:hidden gap-4">
                         <ThemeSwitch />
-                        <button onClick={toggleMenu}>
+                        <button aria-label="open-navigation-menu" onClick={toggleMenu}>
                             <Burger className="w-8 h-8"/>
                         </button>
                     </Transition>}
@@ -51,7 +51,7 @@ export default function MobileMenu() {
                     key="menu"
                     className="top-0 bottom-0 right-0 left-0 h-full fixed bg-black inline md:hidden overflow-hidden">
                         <div className="w-screen h-full fixed flex flex-col justify-between items-center p-3">
-                            <button className="inline md:hidden ml-auto" onClick={toggleMenu}>
+                            <button aria-label="close-navigation-menu" className="inline md:hidden ml-auto" onClick={toggleMenu}>
                                 <Cross className="w-8 h-8" />
                             </button>
                             <ul className="flex flex-col gap-6 text-lg">

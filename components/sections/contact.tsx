@@ -47,6 +47,9 @@ export default function Contact() {
     })
 
     function onSubmit(data: z.infer<typeof FormSchema>) {
+        form.resetField('message')
+        form.resetField('email')
+
         toast({
             description: (
                 <div className="text-green-600 flex justify-center items-center"><CheckIcon className="w-6 h-6 mr-2" />Thank you, you will hear from us soon!</div>
@@ -85,7 +88,7 @@ export default function Contact() {
                                     <FormLabel>Message</FormLabel>
                                     <FormControl>
                                         <Textarea
-                                            placeholder="Tell us a little bit about yourself and what we could help you with"
+                                            placeholder="Tell us a little bit about yourself and how we could be of service"
                                             className="resize-none"
                                             {...field}
                                         />

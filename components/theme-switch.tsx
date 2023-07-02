@@ -37,7 +37,7 @@ export default function ThemeSwitch() {
     }
 
     return (
-        <button onClick={toggleTheme}>
+        <button aria-label="Theme-toggle" onClick={toggleTheme}>
             {showSun ? <Sun className="w-6 h-6 hover:animate-spin-slow" /> : <Moon className="w-6 h-6 hover:animate-wiggle" />}
         </button>
     )

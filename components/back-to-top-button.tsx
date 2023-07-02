@@ -31,7 +31,7 @@ export default function BackToTopButton() {
 
     return (
         <div className="w-full flex justify-center mb-10">
-            <motion.button initial="rest" whileHover="hover" animate="rest" onClick={scrollToTop} className=" rounded border border-gray-500 flex justify-center items-center px-4 py-2">
+            <motion.button aria-label="scroll-to-top" initial="rest" whileHover="hover" animate="rest" onClick={scrollToTop} className=" rounded border border-gray-500 flex justify-center items-center px-4 py-2">
                 <motion.div variants={variants}>
                     <UpArrow className="mr-2 w-4 h-4" />
                 </motion.div>
