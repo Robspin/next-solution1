@@ -13,7 +13,7 @@ export default function Navbar() {
     return (
         <div className="w-screen flex justify-center absolute z-10">
             <div className="w-full flex justify-between items-center max-w-[1280px] px-3 md:px-8">
-                <Link href="/" className="py-2">
+                <Link aria-label="home" href="/" className="py-2">
                     <S1 className="h-10 w-10 fill-black dark:fill-white" />
                 </Link>
                 <ul className={`hidden md:flex gap-8`}>

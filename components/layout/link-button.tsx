@@ -27,7 +27,7 @@ const variants = {
 export default function LinkButton({ route }: Props) {
     return (
         <motion.li initial="rest" whileHover="hover" animate="rest">
-            <Link href={`/${route.toLowerCase()}`}>
+            <Link aria-label={route} href={`/${route.toLowerCase()}`}>
                 {route}
                 <motion.div className="border-b-2 border-tint"
                     variants={variants}

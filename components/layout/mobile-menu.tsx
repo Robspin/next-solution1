@@ -55,10 +55,10 @@ export default function MobileMenu() {
                                 <Cross className="w-8 h-8" />
                             </button>
                             <ul className="flex flex-col gap-6 text-lg">
-                                <li><Link onClick={toggleMenu} href="/">Home</Link></li>
-                                <li><Link onClick={toggleMenu} href="/services">Services</Link></li>
-                                <li><Link onClick={toggleMenu} href="/about">About</Link></li>
-                                <li><Link onClick={toggleMenu} href="/contact">Contact</Link></li>
+                                <li><Link aria-label="Home" onClick={toggleMenu} href="/">Home</Link></li>
+                                <li><Link aria-label="Services" onClick={toggleMenu} href="/services">Services</Link></li>
+                                <li><Link aria-label="About" onClick={toggleMenu} href="/about">About</Link></li>
+                                <li><Link aria-label="Contact" onClick={toggleMenu} href="/contact">Contact</Link></li>
                             </ul>
                             <Solution1 className="w-24 h-12 fill-black dark:fill-white" />
                         </div>
