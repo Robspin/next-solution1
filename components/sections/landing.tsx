@@ -14,7 +14,7 @@ export default function Landing() {
     })
 
     return (
-        <section className="w-full h-screen flex justify-center items-center relative">
+        <section className="w-full h-screen flex justify-center items-center relative overflow-hidden">
             <div className="mx-auto max-w-2xl text-center">
                 <div>
                     <motion.h1

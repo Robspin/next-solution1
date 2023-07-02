@@ -15,7 +15,7 @@ const Sliders = ({ ...props }) => (<svg {...props} xmlns="http://www.w3.org/2000
 
 export default function Description() {
     return (
-        <section className="w-full">
+        <section className="w-full overflow-hidden">
             <motion.div
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
