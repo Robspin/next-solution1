@@ -1,6 +1,7 @@
 import ThemeSwitch from "@/components/theme-switch";
 import Link from "next/link";
 import MobileMenu from "@/components/layout/mobile-menu";
+import LinkButton from "@/components/layout/link-button";
 
 const S1 = ({ ...props }) => (
     <svg {...props} width="12" height="18" viewBox="0 0 12 18" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -16,9 +17,9 @@ export default function Navbar() {
                     <S1 className="h-10 w-10 fill-black dark:fill-white" />
                 </Link>
                 <ul className={`hidden md:flex gap-8`}>
-                    <li><Link href="/services">Services</Link></li>
-                    <li><Link href="/about">About</Link></li>
-                    <li><Link href="/contact">Contact</Link></li>
+                    <LinkButton route="Services" />
+                    <LinkButton route="About" />
+                    <LinkButton route="Contact" />
                     <li><ThemeSwitch /></li>
                 </ul>
                 <MobileMenu />

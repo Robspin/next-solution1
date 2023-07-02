@@ -3,6 +3,7 @@ import Description from "@/components/sections/description"
 import Questions from "@/components/sections/questions"
 import Contact from "@/components/sections/contact"
 import PageContainer from "@/components/layout/page-container"
+import BackToTopButton from "@/components/back-to-top-button";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <div className="w-full h-[30vh]" />
         <Questions />
         <Contact />
+        <BackToTopButton />
     </PageContainer>
   )
 }

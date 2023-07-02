@@ -21,7 +21,7 @@ const Profile = ({ children, name, titles }: { children: ReactNode, name: string
                     {name}
                 </h3>
                 {titles.map((title, i) => (
-                    <h4 className="text-lg md:text-2xl mt-1 ml-8 text-gray-500 italic" key={i}>
+                    <h4 className="text-base mt-1 ml-8 text-gray-500 italic" key={i}>
                         {title}
                     </h4>
                 ))}
@@ -57,7 +57,8 @@ export default function About() {
                     <Profile name="Robin Steeman" titles={['Frontend Developer', 'UX/UI Designer']}>
                         <p>
                             Meet Robin, an car mechanic turned frontend developer. His calm personality is polar opposite of
-                            Joeri and he can be a voice of reason. A bit of a javascript fanboy and likes to dabble in 3d and animations.
+                            Joeri. Quite the javascript fanboy, he likes play around with 3d libraries. Robin will take the time
+                            to think of the best UI/UX solution and then make it an reality.
                         </p>
                     </Profile>
                 </div>
