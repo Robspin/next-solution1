@@ -1,6 +1,9 @@
 "use client"
 import { Fragment, ReactNode, useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
+import Link from "next/link"
+import { Solution1 } from "@/components/layout/footer"
+import ThemeSwitch from "@/components/theme-switch";
 
 const Burger = ({ ...props }) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -36,7 +39,8 @@ export default function MobileMenu() {
         <Fragment>
             <AnimatePresence mode="wait">
                 {!menuOpened &&
-                    <Transition key="burger" className="inline md:hidden">
+                    <Transition key="burger" className="flex md:hidden gap-4">
+                        <ThemeSwitch />
                         <button onClick={toggleMenu}>
                             <Burger className="w-8 h-8"/>
                         </button>
@@ -46,10 +50,17 @@ export default function MobileMenu() {
                 {menuOpened && <Transition
                     key="menu"
                     className="top-0 bottom-0 right-0 left-0 fixed bg-black inline md:hidden">
-                        <div key="cross" className="w-screen flex justify-end p-3">
-                            <button className="inline md:hidden" onClick={toggleMenu}>
+                        <div className="w-screen h-screen flex flex-col justify-between items-center p-3">
+                            <button className="inline md:hidden ml-auto" onClick={toggleMenu}>
                                 <Cross className="w-8 h-8" />
                             </button>
+                            <ul className="flex flex-col gap-6 text-lg">
+                                <li><Link onClick={toggleMenu} href="/">Home</Link></li>
+                                <li><Link onClick={toggleMenu} href="/services">Services</Link></li>
+                                <li><Link onClick={toggleMenu} href="/about">About</Link></li>
+                                <li><Link onClick={toggleMenu} href="/contact">Contact</Link></li>
+                            </ul>
+                            <Solution1 className="w-24 h-12 fill-black dark:fill-white" />
                         </div>
                 </Transition>}
             </AnimatePresence>

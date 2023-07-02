@@ -13,15 +13,15 @@ const Avatar = ({ url, alt }: { url: string, alt: string}) => {
 }
 
 const Profile = ({ children, name, titles }: { children: ReactNode, name: string, titles: string[] }) => (
-    <div className="w-full p-8 border dark:border-gray-600 rounded">
+    <div className="w-full p-4 md:p-8 border dark:border-gray-600 rounded">
         <div className="flex">
             <Avatar url={`/assets/${name.split(' ')[0].toLowerCase()}.png`} alt={name} />
-            <div className="mb-2">
-                <h3 className="text-2xl ml-6 italic">
+            <div className="mb-2 text-xl md:text-2xl">
+                <h3 className="ml-6 italic">
                     {name}
                 </h3>
                 {titles.map((title, i) => (
-                    <h4 className="text-2xl mt-1 ml-8 text-gray-500 italic" key={i}>
+                    <h4 className="text-lg md:text-2xl mt-1 ml-8 text-gray-500 italic" key={i}>
                         {title}
                     </h4>
                 ))}
@@ -34,7 +34,7 @@ const Profile = ({ children, name, titles }: { children: ReactNode, name: string
 export default function About() {
     return (
         <PageContainer>
-            <motion.section className="w-full min-h-screen flex flex-col justify-center relative p-4"
+            <motion.section className="w-full flex flex-col justify-center md:p-4 overflow-hidden"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring", bounce: 0.2, duration: 1.4, delay: 0.2 }}>
@@ -46,7 +46,7 @@ export default function About() {
                     </p>
                 </div>
                 <br/>
-                <div className="grid md:grid-cols-2 gap-12">
+                <div className="grid md:grid-cols-2 gap-12 mb-8">
                     <Profile name="Joeri Abbo" titles={['DevOps', 'Backend Developer']}>
                         <p>
                             Meet Joeri, with an work ethic that comes close to that of Elon Musk, he is always working,
