@@ -49,8 +49,8 @@ export default function MobileMenu() {
             <AnimatePresence>
                 {menuOpened && <Transition
                     key="menu"
-                    className="top-0 bottom-0 right-0 left-0 fixed bg-black inline md:hidden">
-                        <div className="w-screen h-screen flex flex-col justify-between items-center p-3">
+                    className="top-0 bottom-0 right-0 left-0 h-full fixed bg-black inline md:hidden overflow-hidden">
+                        <div className="w-screen h-full fixed flex flex-col justify-between items-center p-3">
                             <button className="inline md:hidden ml-auto" onClick={toggleMenu}>
                                 <Cross className="w-8 h-8" />
                             </button>

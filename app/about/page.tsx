@@ -57,8 +57,8 @@ export default function About() {
                     <Profile name="Robin Steeman" titles={['Frontend Developer', 'UX/UI Designer']}>
                         <p>
                             Meet Robin, an car mechanic turned frontend developer. His calm personality is polar opposite of
-                            Joeri. Quite the javascript fanboy, he likes play around with 3d libraries. Robin will take the time
-                            to think of the best UI/UX solution and then make it an reality.
+                            Joeri. Quite the javascript fanboy, he likes to play around with 3d libraries. Robin will take the time
+                            to think of the best UI/UX solution and then turn it into reality.
                         </p>
                     </Profile>
                 </div>
