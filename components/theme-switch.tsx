@@ -1,6 +1,6 @@
 "use client"
-
-import {useEffect, useState} from "react"
+import { useAtom } from 'jotai'
+import { themeAtom } from '@/components/layout/theme-wrapper'
 
 const Moon = ({ ...props }) => (
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor"
@@ -17,28 +17,15 @@ const Sun = ({ ...props }) => (
 )
 
 export default function ThemeSwitch() {
-    const [showSun, setShowSun] = useState(false)
-
-    useEffect(() => {
-        if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-            toggleTheme()
-        }
-    }, [])
+    const [theme, setTheme] = useAtom(themeAtom)
     const toggleTheme = () => {
-        const html = document.querySelector('html')
-        if (!html) return
-        if (showSun) {
-            html.classList.remove('dark')
-            setShowSun(false)
-        } else {
-            html.classList.add('dark')
-            setShowSun(true)
-        }
+        if(theme === 'dark') setTheme('light')
+        if(theme === 'light') setTheme('dark')
     }
 
     return (
         <button aria-label="Theme-toggle" onClick={toggleTheme}>
-            {showSun ? <Sun className="w-6 h-6 hover:animate-spin-slow" /> : <Moon className="w-6 h-6 hover:animate-wiggle" />}
+            {theme === 'dark' ? <Sun className="w-6 h-6 hover:animate-spin-slow" /> : <Moon className="w-6 h-6 hover:animate-wiggle" />}
         </button>
     )
 }
