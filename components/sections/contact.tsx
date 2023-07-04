@@ -15,7 +15,7 @@ import {
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
 import { Input } from "@/components/ui/input"
-import { motion } from "framer-motion"
+import { filterProps, motion } from "framer-motion"
 
 const CheckIcon = ({ ...props }) => (
     <svg { ...props } xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -46,9 +46,20 @@ export default function Contact() {
         resolver: zodResolver(FormSchema),
     })
 
-    function onSubmit(data: z.infer<typeof FormSchema>) {
-        form.resetField('message')
-        form.resetField('email')
+    async function onSubmit(data: z.infer<typeof FormSchema>) {
+        // form.resetField('message')
+        // form.resetField('email')
+
+        const body = JSON.stringify({ from: form.getValues('email'), text: form.getValues('message') })
+
+        const res = await fetch('/api/contact-email', { headers: { 'Content-type': 'application/json' }, method: 'POST', body })
+
+        console.log('done: ', res)
+
+        if (!res) {
+            console.log('Something went wrong sending email')
+            return
+        }
 
         toast({
             description: (
