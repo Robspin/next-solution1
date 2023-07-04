@@ -16,7 +16,9 @@ export const sendEmail = async (from: string, text: string) => {
         to: ['next_solution1@hotmail.com', 'robin_steeman@hotmail.com', 'joeriabbo@hotmail.com'],
         subject: 'Solution1 contact request',
         text: `${text}
-            Afzender: ${from}
+        
+        
+        Afzender: ${from}
         `
     }
 
