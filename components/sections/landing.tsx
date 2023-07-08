@@ -28,7 +28,7 @@ export default function Landing() {
                         transition={{ duration: 0.90, delay: 0.5 }}
                         className={`text-3xl font-bold tracking-tight md:text-6xl ${inter.className}`}>So you don't have to.</motion.h1>
 
-                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.40 }} className="mt-2 md:mt-6 md:text-lg leading-8">Specialists in IT solutions from dev-ops to frontend</motion.p>
+                    <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1, delay: 1.40 }} className="mt-2 md:mt-6 md:text-lg leading-8">Specialists in software solutions from dev-ops to frontend</motion.p>
                 </div>
             </div>
             <AnimatePresence>

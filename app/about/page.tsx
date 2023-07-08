@@ -34,7 +34,7 @@ const Profile = ({ children, name, titles }: { children: ReactNode, name: string
 export default function About() {
     return (
         <PageContainer>
-            <motion.section className="w-full flex flex-col justify-center md:p-4 overflow-hidden"
+            <motion.section className="w-full flex flex-col justify-center md:p-4 overflow-hidden max-md:mb-20"
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring", bounce: 0.2, duration: 1.4, delay: 0.2 }}>

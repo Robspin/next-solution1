@@ -71,7 +71,7 @@ export default function Contact() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ type: "spring", bounce: 0.2, duration: 1.4, delay: 0.2 }}
-                    viewport={{ once: true, amount: 0.6 }}>
+                    viewport={{ once: true, amount: 0.3 }}>
             <h3 className="text-2xl font-medium mb-8">Contact us</h3>
             <div className="max-md:w-full p-4 rounded border dark:border-gray-600">
                 <Form {...form}>

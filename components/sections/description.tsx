@@ -15,7 +15,7 @@ export default function Description() {
     return (
         <section className="w-full overflow-hidden">
             <div className="max-md:flex max-md:flex-col md:grid md:grid-cols-2 w-full gap-20 md:p-8">
-                <div className="rounded h-[60vh] w-full relative overflow-hidden">
+                <div className="rounded h-[50vh] w-full relative overflow-hidden">
                     <Image src="/assets/description-1.jpg" alt="description" className="object-cover" fill={true} />
                 </div>
                 <div className="w-full h-full max-md:mt-8">
@@ -37,7 +37,7 @@ export default function Description() {
                         </p>
                     </div>
                 </div>
-                <div className="rounded h-[60vh] w-full relative overflow-hidden">
+                <div className="rounded h-[50vh] w-full relative overflow-hidden">
                     <Image src="/assets/description-2.jpg" alt="description" className="object-cover" fill={true} />
                 </div>
             </div>
