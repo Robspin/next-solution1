@@ -98,7 +98,7 @@ export default function Contact() {
                                     <FormLabel>Message</FormLabel>
                                     <FormControl>
                                         <Textarea
-                                            placeholder="Tell us a little bit about yourself and how we could be of service"
+                                            placeholder="Please tell us a little bit about yourself and how we could be of service"
                                             className="resize-none"
                                             {...field}
                                         />
