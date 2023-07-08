@@ -1,5 +1,4 @@
 "use client"
-
 import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
@@ -15,7 +14,7 @@ import {
 import { Textarea } from "@/components/ui/textarea"
 import { toast } from "@/components/ui/use-toast"
 import { Input } from "@/components/ui/input"
-import { filterProps, motion } from "framer-motion"
+import { motion } from "framer-motion"
 
 const CheckIcon = ({ ...props }) => (
     <svg { ...props } xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
@@ -47,10 +46,9 @@ export default function Contact() {
     })
 
     async function onSubmit(data: z.infer<typeof FormSchema>) {
-        // form.resetField('message')
-        // form.resetField('email')
+        const body = JSON.stringify({ from: data.email, text: data.message })
 
-        const body = JSON.stringify({ from: form.getValues('email'), text: form.getValues('message') })
+        form.reset({ message: '', email: '' })
 
         const res = await fetch('/api/contact-email', { headers: { 'Content-type': 'application/json' }, method: 'POST', body })
 
@@ -81,6 +79,7 @@ export default function Contact() {
                         <FormField
                             control={form.control}
                             name="email"
+                            defaultValue=""
                             render={({ field }) => (
                                 <FormItem>
                                     <FormLabel>Email</FormLabel>
