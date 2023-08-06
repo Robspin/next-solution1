@@ -6,8 +6,7 @@ import PageContainer from "@/components/layout/page-container"
 import BackToTopButton from "@/components/back-to-top-button";
 
 const updatePageViews = async () => {
-    const res = await (await fetch(`${process.env.VIEWS_API_URL}?key=solution1`)).json()
-    console.log(`${res} total visits`)
+    const res = await (await fetch(`${process.env.VIEWS_API_URL}?key=solution1`, { cache: 'no-store' })).json()
 }
 
 export default async function Home() {
