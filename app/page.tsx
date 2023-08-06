@@ -4,10 +4,10 @@ import Questions from "@/components/sections/questions"
 import Contact from "@/components/sections/contact"
 import PageContainer from "@/components/layout/page-container"
 import BackToTopButton from "@/components/back-to-top-button";
-import fetch from 'nodemailer/lib/fetch'
 
 const updatePageViews = async () => {
-    await fetch(`${process.env.VIEWS_API_URL}?key=solution1`)
+    const res = await (await fetch(`${process.env.VIEWS_API_URL}?key=solution1`, { cache: 'no-cache' })).json()
+    console.log(`${res} total visits`)
 }
 
 export default async function Home() {
