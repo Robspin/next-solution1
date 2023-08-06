@@ -4,8 +4,15 @@ import Questions from "@/components/sections/questions"
 import Contact from "@/components/sections/contact"
 import PageContainer from "@/components/layout/page-container"
 import BackToTopButton from "@/components/back-to-top-button";
+import fetch from 'nodemailer/lib/fetch'
 
-export default function Home() {
+const updatePageViews = async () => {
+    await fetch(`${process.env.VIEWS_API_URL}?key=solution1`)
+}
+
+export default async function Home() {
+    await updatePageViews()
+
   return (
     <PageContainer background>
         <Landing />
